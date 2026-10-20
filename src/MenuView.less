@@ -1,0 +1,78 @@
+/*
+ * 次面板对齐宿主侧栏（运行 / AI）：
+ * 透明底、11px 标题、22px 菜单项，选中为实心蓝。
+ * 选择器写得比 antd 6 的 css-in-js 更具体，避免又变回白底大菜单。
+ */
+.side {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  flex: none;
+}
+
+.title {
+  cursor: default;
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu {
+  width: 100%;
+  padding: 0 6px;
+  box-sizing: border-box;
+  flex: none;
+
+  :global(.ant-menu.ant-menu-root) {
+    width: 100%;
+    border-inline-end: none !important;
+    background: transparent !important;
+  }
+
+  :global(.ant-menu.ant-menu-root .ant-menu-item) {
+    height: 22px !important;
+    line-height: 22px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    margin-inline: 0 !important;
+    margin-block: 0 !important;
+    padding-inline: 8px !important;
+    border-radius: 2px !important;
+    font-size: 13px;
+  }
+
+  :global(.ant-menu.ant-menu-root .ant-menu-item:not(.ant-menu-item-selected):hover) {
+    background-color: rgba(22, 119, 255, 0.1) !important;
+  }
+
+  :global(.ant-menu.ant-menu-root .ant-menu-item-selected) {
+    background-color: #1677ff !important;
+    color: #fff !important;
+    font-weight: 500;
+  }
+
+  :global(.ant-menu.ant-menu-root .ant-menu-item-selected:hover) {
+    background-color: #4096ff !important;
+    color: #fff !important;
+  }
+}
+
+.note {
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.65;
+}

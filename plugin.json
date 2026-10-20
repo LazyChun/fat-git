@@ -1,0 +1,25 @@
+{
+  "id": "877da771-e35f-49cf-9f9a-468dff6269f5",
+  "name": "fat-git",
+  "version": "0.1.0",
+  "description": "管理 FatNotes 当前工作区的 Git：变更、提交图、分支与自动提交。",
+  "entry": "remoteEntry.js",
+  "mfName": "plugin_877da771_e35f_49cf_9f9a_468dff6269f5",
+  "container": "plugin_877da771_e35f_49cf_9f9a_468dff6269f5",
+  "exposed": "./plugin",
+  "contributions": {
+    "activityBar": true,
+    "primarySidebar": true,
+    "panel": false,
+    "footer": true,
+    "routes": true,
+    "widgetTypes": false
+  },
+  "permissions": [],
+  "backend": {
+    "enabled": true,
+    "entry": "backend/main.py",
+    "requirements": "backend/requirements.txt",
+    "depsStrategy": "vendor"
+  }
+}

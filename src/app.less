@@ -1,0 +1,158 @@
+.page {
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px 18px 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.hint {
+  margin: 0 0 12px;
+  opacity: 0.72;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 6px;
+  font-weight: 600;
+}
+
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fileRow:hover {
+  background: rgba(127, 127, 127, 0.12);
+}
+
+.path {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 8px 12px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.metaGrid code {
+  word-break: break-all;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
+.label {
+  opacity: 0.65;
+}
+
+.graphRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  overflow: hidden;
+  padding-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.graphRow:hover {
+  background: rgba(127, 127, 127, 0.12);
+}
+
+.headRow {
+  background: rgba(22, 119, 255, 0.08);
+}
+
+.refs {
+  display: flex;
+  gap: 4px;
+  flex: none;
+  max-width: 36%;
+  overflow: hidden;
+}
+
+.subject {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  flex: none;
+  opacity: 0.65;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.diff {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow: auto;
+}
+
+.line {
+  padding: 0 12px;
+  white-space: pre;
+  min-height: 1.5em;
+}
+
+.add {
+  background: rgba(46, 160, 67, 0.16);
+}
+
+.del {
+  background: rgba(248, 81, 73, 0.16);
+}
+
+.hunk {
+  color: #1677ff;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.fieldLabel {
+  font-size: 13px;
+  font-weight: 600;
+}
